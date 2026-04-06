@@ -873,6 +873,507 @@ const resList = [
                   }
                 },
 
+                 {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                      "info": {
+                        "id": "174127",
+                        "name": "Kishore Restaurant",
+                        "city": "10310",
+                        "slugs": {
+                          "restaurant": "kishore-restaurant-itarsi-old-itarsi",
+                          "city": "itarsi"
+                        },
+                        "cloudinaryImageId": "jq7m6p2in79jasgjsyup",
+                        "address": "Near Jat Stambh Jawagar Bazar ,Itarsi",
+                        "locality": "Old Itarsi Road",
+                        "areaName": "Suraj Ganj",
+                        "costForTwo": "19900",
+                        "costForTwoMessage": "₹199 FOR TWO",
+                        "cuisines": [
+                          "Snacks",
+                          "Italian",
+                          "Desserts",
+                          "Punjabi"
+                        ],
+                        "avgRating": 4.1,
+                        "feeDetails": {
+
+                        },
+                        "parentId": "118902",
+                        "avgRatingString": "4.1",
+                        "totalRatingsString": "4.6K+",
+                        "sla": {
+                          "deliveryTime": 20,
+                          "minDeliveryTime": 15,
+                          "maxDeliveryTime": 20,
+                          "lastMileTravel": 1.9,
+                          "serviceability": "SERVICEABLE",
+                          "rainMode": "RAIN_MODE_NONE",
+                          "slaString": "15-20 MINS",
+                          "lastMileTravelString": "1.9 km",
+                          "iconType": "ICON_TYPE_EMPTY"
+                        },
+                        "availability": {
+                          "opened": true,
+                          "restaurantClosedMeta": {
+
+                          }
+                        },
+                        "badges": {
+                          "imageBadges": [
+                            {
+                              "imageId": "android/static-assets/icons/big_rx.png",
+                              "description": "bolt!"
+                            },
+                            {
+                              "imageId": "v1695133679/badges/Pure_Veg111.png",
+                              "description": "pureveg"
+                            }
+                          ]
+                        },
+                        "aggregatedDiscountInfoV3": {
+                          "header": "ITEMS",
+                          "subHeader": "AT ₹59"
+                        },
+                        "ratingSlab": "RATING_SLAB_5",
+                        "orderabilityCommunication": {
+                          "title": {
+
+                          },
+                          "subTitle": {
+
+                          },
+                          "message": {
+
+                          },
+                          "customIcon": {
+
+                          },
+                          "commsStyling": {
+
+                          }
+                        },
+                        "cartOrderabilityNudgeBanner": {
+                          "parameters": {
+
+                          },
+                          "presentation": {
+
+                          }
+                        },
+                        "externalRatings": {
+                          "aggregatedRating": {
+                            "rating": "--"
+                          }
+                        },
+                        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                        "featuredSectionInfo": {
+                          "sectionTitle": "More"
+                        },
+                        "showEoOffer": true
+                      },
+                      "analytics": {
+                        "screenName": "explore",
+                        "context": "{\"tid\":\"52d3559a-7299-83eb-c475-e2d71211b0b2\",\"grid\":\"aa6a9ddd-ed03-4426-972c-2ff468c88339\",\"queryUniqueId\":\"b430e232-f4c8-3a81-fcc9-b266ef63c2f8\",\"query\":\"restaurants\"}",
+                        "objectValue": "174127",
+                        "impressionObjectName": "impression-restaurant",
+                        "clickObjectName": "click-restaurant"
+                      },
+                      "ctaWithParams": {
+                        "link": "swiggy://menu",
+                        "type": "DEEPLINK",
+                        "params": {
+                          "restaurant_id": "174127",
+                          "query": "restaurants",
+                          "sourceSessionId": "qn2b36c621f-b6f3-4695-94bd-76b29b1c1",
+                          "source": "SEARCH",
+                          "isSld": "false",
+                          "sourceRequestId": "00000000000000000000000000000000",
+                          "qrEnabled": "false"
+                        }
+                      }
+                    }
+                  }
+                },
+
+                 {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                      "info": {
+                        "id": "244476",
+                        "name": "Ranjeet Dhaba & Restaurant",
+                        "city": "10310",
+                        "slugs": {
+                          "restaurant": "ranjeet-dhaba-&-restaurant-old-itarsi-old-itarsi",
+                          "city": "itarsi"
+                        },
+                        "cloudinaryImageId": "ophnfhzba9aulmg75t8b",
+                        "address": "near pathrotha th itarsi ,Itarsi,Itarsi,Narmadapuram,Madhya Pradesh-461111",
+                        "locality": "pathrotha th itarsi",
+                        "areaName": "Old Itarsi",
+                        "costForTwo": "20000",
+                        "costForTwoMessage": "₹200 FOR TWO",
+                        "cuisines": [
+                          "North Indian"
+                        ],
+                        "avgRating": 4.1,
+                        "feeDetails": {
+
+                        },
+                        "parentId": "166971",
+                        "avgRatingString": "4.1",
+                        "totalRatingsString": "101",
+                        "promoted": true,
+                        "adTrackingId": "cid=d7c96fa6-7d31-4e8c-8159-2296be9555dc~p=3~adgrpid=d7c96fa6-7d31-4e8c-8159-2296be9555dc#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=244476~plpr=SEARCH#RESTAURANT~st=restaurants~eid=bb19d2c7-5fbc-4842-a4c4-7beabbaf90c9~srvts=1775469934727",
+                        "sla": {
+                          "deliveryTime": 26,
+                          "minDeliveryTime": 25,
+                          "maxDeliveryTime": 30,
+                          "lastMileTravel": 2.1,
+                          "serviceability": "SERVICEABLE",
+                          "rainMode": "RAIN_MODE_NONE",
+                          "slaString": "25-30 MINS",
+                          "lastMileTravelString": "2.1 km",
+                          "iconType": "ICON_TYPE_EMPTY"
+                        },
+                        "availability": {
+                          "opened": true,
+                          "restaurantClosedMeta": {
+
+                          }
+                        },
+                        "badges": {
+                          "imageBadges": [
+                            {
+                              "imageId": "android/static-assets/icons/big_rx.png",
+                              "description": "bolt!"
+                            }
+                          ]
+                        },
+                        "aggregatedDiscountInfoV3": {
+                          "header": "₹200 OFF",
+                          "subHeader": "ABOVE ₹999",
+                          "discountTag": "FLAT DEAL",
+                          "logoCtx": {
+                            "text": "BENEFITS"
+                          }
+                        },
+                        "ratingSlab": "RATING_SLAB_5",
+                        "orderabilityCommunication": {
+                          "title": {
+
+                          },
+                          "subTitle": {
+
+                          },
+                          "message": {
+
+                          },
+                          "customIcon": {
+
+                          },
+                          "commsStyling": {
+
+                          }
+                        },
+                        "cartOrderabilityNudgeBanner": {
+                          "parameters": {
+
+                          },
+                          "presentation": {
+
+                          }
+                        },
+                        "externalRatings": {
+                          "aggregatedRating": {
+                            "rating": "--"
+                          }
+                        },
+                        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                        "featuredSectionInfo": {
+                          "sectionTitle": "More"
+                        },
+                        "campaignId": "d7c96fa6-7d31-4e8c-8159-2296be9555dc",
+                        "showEoOffer": true
+                      },
+                      "analytics": {
+                        "screenName": "explore",
+                        "context": "{\"tid\":\"52d3559a-7299-83eb-c475-e2d71211b0b2\",\"grid\":\"aa6a9ddd-ed03-4426-972c-2ff468c88339\",\"queryUniqueId\":\"b430e232-f4c8-3a81-fcc9-b266ef63c2f8\",\"query\":\"restaurants\",\"adTrackingId\":\"cid=d7c96fa6-7d31-4e8c-8159-2296be9555dc~p=3~adgrpid=d7c96fa6-7d31-4e8c-8159-2296be9555dc#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=244476~plpr=SEARCH#RESTAURANT~st=restaurants~eid=bb19d2c7-5fbc-4842-a4c4-7beabbaf90c9~srvts=1775469934727\"}",
+                        "objectValue": "244476",
+                        "impressionObjectName": "impression-restaurant-ad",
+                        "clickObjectName": "click-restaurant-ad"
+                      },
+                      "ctaWithParams": {
+                        "link": "swiggy://menu",
+                        "type": "DEEPLINK",
+                        "params": {
+                          "sourceRequestId": "00000000000000000000000000000000",
+                          "qrEnabled": "false",
+                          "restaurant_id": "244476",
+                          "query": "restaurants",
+                          "sourceSessionId": "qn2b36c621f-b6f3-4695-94bd-76b29b1c1",
+                          "source": "SEARCH",
+                          "isSld": "false"
+                        }
+                      }
+                    }
+                  }
+                },
+
+                  {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                      "info": {
+                        "id": "174114",
+                        "name": "Shri Shyam Kripa Restaurant",
+                        "city": "10310",
+                        "slugs": {
+                          "restaurant": "shri-shyam-kripa-restaurant-itarsi-old-itarsi",
+                          "city": "itarsi"
+                        },
+                        "cloudinaryImageId": "shemmww21ixcjb1thjrk",
+                        "address": "Post office Road, Jaistambh, Itarsi",
+                        "locality": "Post office Road",
+                        "areaName": "main market",
+                        "costForTwo": "19900",
+                        "costForTwoMessage": "₹199 FOR TWO",
+                        "cuisines": [
+                          "Italian",
+                          "Thalis",
+                          "Desserts",
+                          "Beverages"
+                        ],
+                        "avgRating": 4,
+                        "feeDetails": {
+
+                        },
+                        "parentId": "187053",
+                        "avgRatingString": "4.0",
+                        "totalRatingsString": "388",
+                        "sla": {
+                          "deliveryTime": 25,
+                          "minDeliveryTime": 20,
+                          "maxDeliveryTime": 25,
+                          "lastMileTravel": 1.9,
+                          "serviceability": "SERVICEABLE",
+                          "rainMode": "RAIN_MODE_NONE",
+                          "slaString": "20-25 MINS",
+                          "lastMileTravelString": "1.9 km",
+                          "iconType": "ICON_TYPE_EMPTY"
+                        },
+                        "availability": {
+                          "opened": true,
+                          "restaurantClosedMeta": {
+
+                          }
+                        },
+                        "badges": {
+                          "imageBadges": [
+                            {
+                              "imageId": "android/static-assets/icons/big_rx.png",
+                              "description": "bolt!"
+                            },
+                            {
+                              "imageId": "v1695133679/badges/Pure_Veg111.png",
+                              "description": "pureveg"
+                            }
+                          ]
+                        },
+                        "aggregatedDiscountInfoV3": {
+                          "header": "ITEMS",
+                          "subHeader": "AT ₹59",
+                          "logoCtx": {
+                            "text": "BENEFITS"
+                          }
+                        },
+                        "ratingSlab": "RATING_SLAB_4",
+                        "orderabilityCommunication": {
+                          "title": {
+
+                          },
+                          "subTitle": {
+
+                          },
+                          "message": {
+
+                          },
+                          "customIcon": {
+
+                          },
+                          "commsStyling": {
+
+                          }
+                        },
+                        "cartOrderabilityNudgeBanner": {
+                          "parameters": {
+
+                          },
+                          "presentation": {
+
+                          }
+                        },
+                        "externalRatings": {
+                          "aggregatedRating": {
+                            "rating": "--"
+                          }
+                        },
+                        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                        "featuredSectionInfo": {
+                          "sectionTitle": "More"
+                        },
+                        "showEoOffer": true
+                      },
+                      "analytics": {
+                        "screenName": "explore",
+                        "context": "{\"tid\":\"52d3559a-7299-83eb-c475-e2d71211b0b2\",\"grid\":\"aa6a9ddd-ed03-4426-972c-2ff468c88339\",\"queryUniqueId\":\"b430e232-f4c8-3a81-fcc9-b266ef63c2f8\",\"query\":\"restaurants\"}",
+                        "objectValue": "174114",
+                        "impressionObjectName": "impression-restaurant",
+                        "clickObjectName": "click-restaurant"
+                      },
+                      "ctaWithParams": {
+                        "link": "swiggy://menu",
+                        "type": "DEEPLINK",
+                        "params": {
+                          "restaurant_id": "174114",
+                          "query": "restaurants",
+                          "sourceSessionId": "qn2b36c621f-b6f3-4695-94bd-76b29b1c1",
+                          "source": "SEARCH",
+                          "isSld": "false",
+                          "sourceRequestId": "00000000000000000000000000000000",
+                          "qrEnabled": "false"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "card": {
+                    "card": {
+                      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                      "info": {
+                        "id": "1143362",
+                        "name": "Tinku Maharaj Restaurant",
+                        "city": "10310",
+                        "slugs": {
+                          "restaurant": "tinku-maharaj-restaurant-old-itarsi-old-itarsi",
+                          "city": "itarsi"
+                        },
+                        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/7/11/627e3944-8abb-4507-a4d4-098d501c975c_1143362.jpg",
+                        "address": "WARD NO 1 JAYPRAKASH NAGAR ITARSI ,Itarsi,Itarsi,Narmadapuram,Madhya Pradesh-461111",
+                        "locality": "Old Itarsi",
+                        "areaName": "Old Itarsi",
+                        "costForTwo": "19900",
+                        "costForTwoMessage": "₹199 FOR TWO",
+                        "cuisines": [
+                          "Chinese",
+                          "Italian",
+                          "Thalis",
+                          "Beverages",
+                          "North Indian"
+                        ],
+                        "avgRating": 4.4,
+                        "feeDetails": {
+
+                        },
+                        "parentId": "657211",
+                        "avgRatingString": "4.4",
+                        "totalRatingsString": "51",
+                        "sla": {
+                          "deliveryTime": 39,
+                          "minDeliveryTime": 35,
+                          "maxDeliveryTime": 40,
+                          "lastMileTravel": 4.4,
+                          "serviceability": "SERVICEABLE",
+                          "rainMode": "RAIN_MODE_NONE",
+                          "slaString": "35-40 MINS",
+                          "lastMileTravelString": "4.4 km",
+                          "iconType": "ICON_TYPE_EMPTY"
+                        },
+                        "availability": {
+                          "opened": true,
+                          "restaurantClosedMeta": {
+
+                          }
+                        },
+                        "aggregatedDiscountInfo": {
+                          "visible": true
+                        },
+                        "badges": {
+                          "imageBadges": [
+                            {
+                              "imageId": "v1695133679/badges/Pure_Veg111.png",
+                              "description": "pureveg"
+                            }
+                          ]
+                        },
+                        "aggregatedDiscountInfoV2": {
+                          "visible": true
+                        },
+                        "ratingSlab": "RATING_SLAB_5",
+                        "orderabilityCommunication": {
+                          "title": {
+
+                          },
+                          "subTitle": {
+
+                          },
+                          "message": {
+
+                          },
+                          "customIcon": {
+
+                          },
+                          "commsStyling": {
+
+                          }
+                        },
+                        "cartOrderabilityNudgeBanner": {
+                          "parameters": {
+
+                          },
+                          "presentation": {
+
+                          }
+                        },
+                        "externalRatings": {
+                          "aggregatedRating": {
+                            "rating": "--"
+                          }
+                        },
+                        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                        "featuredSectionInfo": {
+                          "sectionTitle": "More"
+                        },
+                        "showEoOffer": true
+                      },
+                      "analytics": {
+                        "screenName": "explore",
+                        "context": "{\"tid\":\"52d3559a-7299-83eb-c475-e2d71211b0b2\",\"grid\":\"aa6a9ddd-ed03-4426-972c-2ff468c88339\",\"queryUniqueId\":\"b430e232-f4c8-3a81-fcc9-b266ef63c2f8\",\"query\":\"restaurants\"}",
+                        "objectValue": "1143362",
+                        "impressionObjectName": "impression-restaurant",
+                        "clickObjectName": "click-restaurant"
+                      },
+                      "ctaWithParams": {
+                        "link": "swiggy://menu",
+                        "type": "DEEPLINK",
+                        "params": {
+                          "restaurant_id": "1143362",
+                          "query": "restaurants",
+                          "sourceSessionId": "qn2b36c621f-b6f3-4695-94bd-76b29b1c1",
+                          "source": "SEARCH",
+                          "isSld": "false",
+                          "sourceRequestId": "00000000000000000000000000000000",
+                          "qrEnabled": "false"
+                        }
+                      }
+                    }
+                  }
+                },
+
 
   {
     card: {

@@ -31,6 +31,11 @@ const Body = () => {
           />
         </div>
       </div>
+
+
+      <div className="mt-5 w-48 p-3 rounded-xl bg-amber-500 font-serif self-start md:-ml-8 ">
+        <h1>Top Rated Restaurants</h1>
+      </div>
     </div>
   );
 };

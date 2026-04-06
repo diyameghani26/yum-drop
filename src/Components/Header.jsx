@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "remixicon/fonts/remixicon.css";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="w-full  bg-[#ffeada8f] font-serif shadow-sm px-5 md:px-8 py-4 flex items-center justify-between" style={{ fontFamily: "cursive" }}>
+      <div className="w-full  bg-[#fdefe48f] font-serif shadow-sm px-5 md:px-8 py-4 flex items-center justify-between" style={{ fontFamily: "cursive" }}>
         
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -18,11 +18,11 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-6 text-lg font-medium text-gray-500">
-          <p className="cursor-pointer hover:text-black">Home</p>
-          <p className="cursor-pointer hover:text-black">About us</p>
-          <p className="cursor-pointer hover:text-black">Contact us</p>
-          <p className="cursor-pointer hover:text-black">Cart</p>
+        <div className="hidden md:flex gap-6 text-lg md:text-xl font-medium text-black">
+          <p className="cursor-pointer hover:text-gray-500">Home</p>
+          <p className="cursor-pointer hover:text-gray-500">About us</p>
+          <p className="cursor-pointer hover:text-gray-500">Contact us</p>
+          <p className="cursor-pointer hover:text-gray-500">Cart</p>
         </div>
 
         {/* Hamburger (RIGHT SIDE) */}
