@@ -8,7 +8,7 @@ function App() {
     <div className="bg-[#ffeada8f]">
       <Header />
       <Body/>
-      <RestaurantCard/>
+      
     </div>
   );
 }

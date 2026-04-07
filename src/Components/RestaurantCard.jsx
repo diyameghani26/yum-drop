@@ -1,18 +1,10 @@
-import React from 'react'
 
-import resList from '../utils/mockData';
+import React from "react";
 
+const RestaurantCard = ({ resData }) => {
+  const info = resData?.info || resData?.card?.card?.info;
 
-
-
-
-const RestaurantCard = () => {
-   return (
-    <div className="px-8">
-      <div className="grid  md:grid-cols-4 gap-6 mt-6">
-
-{resList.map((item, i) => {
-  const info = item?.card?.card?.info;
+  if (!info) return null;
 
   const {
     name,
@@ -21,34 +13,30 @@ const RestaurantCard = () => {
     cloudinaryImageId,
     costForTwoMessage,
     sla,
-  } = info || {};
+  } = info;
 
   return (
-    <div
-      key={i}
-      className="bg-white rounded-2xl shadow-sm p-2 border border-transparent hover:border-gray-500 transition-all duration-200"
-    >
+    <div className="bg-white  rounded-2xl shadow-sm p-3 border border-transparent hover:border-gray-500 transition-all duration-200">
+      
       {/* IMAGE */}
       <img
         className="w-full h-40 object-cover rounded-xl"
         src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/" +
           cloudinaryImageId
+            ? "https://media-assets.swiggy.com/swiggy/image/upload/" +
+              cloudinaryImageId
+            : "https://via.placeholder.com/300"
         }
         alt={name}
       />
 
       {/* NAME */}
-      <h4 className="mt-2 font-semibold text-sm">
-        {name}
-      </h4>
+      <h4 className="mt-2 font-semibold text-sm">{name}</h4>
 
       {/* RATING */}
-      <p className="text-gray-600 text-sm">
-        ⭐ {avgRating}
-      </p>
+      <p className="text-gray-600 text-sm">⭐ {avgRating}</p>
 
-      {/* DELIVERY TIME */}
+      {/* DELIVERY */}
       <p className="text-gray-500 text-xs">
         {sla?.deliveryTime} mins
       </p>
@@ -64,13 +52,6 @@ const RestaurantCard = () => {
       </p>
     </div>
   );
-})}
-
-      </div>
-    </div>
-  );
 };
 
-
-
-export default RestaurantCard
+export default RestaurantCard;
