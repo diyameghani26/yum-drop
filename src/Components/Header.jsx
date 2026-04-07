@@ -11,7 +11,7 @@ const Header = () => {
         
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="./public/—Pngtree—food logo_8366720.png" alt="" className="w-13 md:w-16" />
+          <img src="/—Pngtree—food logo_8366720.png" alt="" className="w-13 md:w-16" />
           <h1 className="font-bold text-2xl md:text-4xl text-gray-700 ">
             Yum<span className="text-amber-500">Drop</span>
           </h1>

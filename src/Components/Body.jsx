@@ -32,12 +32,18 @@ const Body = () => {
         </div>
       </div>
 
-
-      <div className="mt-5 w-48 p-3 rounded-xl bg-amber-500 font-serif self-start md:-ml-8 ">
+<div className="flex flex-row gap-2 ">
+    <div className="mt-5 w-41 md:w-48   p-2 text-sm md:p-3 rounded-xl bg-amber-500 font-serif self-start  ">
         <h1>Top Rated Restaurants</h1>
+        
       </div>
+
+
+</div>
+    
     </div>
   );
 };
 
 export default Body;
+
