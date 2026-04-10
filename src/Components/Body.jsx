@@ -1,13 +1,37 @@
-import React from "react";
-import resList from "../utils/mockData";
+import React, { useEffect } from "react";
+import ShimmerUI from "./ShimmerUI";
 import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
 
-  const [ListOfRestaurant, setListOfRestaurant] = useState(resList)
+  const [ListOfRestaurant, setListOfRestaurant] = useState([])
 
-  return (
+  useEffect(()=>{
+fetchData();
+  },[])
+
+
+ const fetchData = async () => {
+  const data = await fetch("https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.6152074&lng=77.7620767&carousel=true&third_party_vendor=1");
+
+  const json = await data.json();
+
+const restaurants =
+  json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+setListOfRestaurant(restaurants);
+console.log(
+  json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+);
+
+ };
+ 
+ 
+ if(ListOfRestaurant.length === 0){
+  return <ShimmerUI/>
+ } else{
+ return (
     <div className=" w-full pt-4 flex flex-col justify-center px-6 md:px-16 md:items-center">
 
       {/* Heading */}
@@ -67,6 +91,9 @@ const Body = () => {
 
     </div>
   );
+ }
+
+ 
 };
 
 export default Body;
