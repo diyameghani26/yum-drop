@@ -23,6 +23,7 @@ const Header = () => {
           <p className="cursor-pointer hover:text-gray-500">About us</p>
           <p className="cursor-pointer hover:text-gray-500">Contact us</p>
           <p className="cursor-pointer hover:text-gray-500">Cart</p>
+          <button className="w-18  bg-amber-500 rounded-xl  ">Login</button>
         </div>
 
         {/* Hamburger (RIGHT SIDE) */}

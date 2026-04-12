@@ -13,7 +13,9 @@ fetchData();
 
 
  const fetchData = async () => {
-  const data = await fetch("https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.6152074&lng=77.7620767&carousel=true&third_party_vendor=1");
+  const data = await fetch(
+  "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?lat=22.61&lng=77.76"
+);
 
   const json = await data.json();
 
