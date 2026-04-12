@@ -17,6 +17,13 @@ fetchData();
   "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?lat=22.61&lng=77.76"
 );
 
+
+
+
+
+
+
+
   const json = await data.json();
 
 const restaurants =
