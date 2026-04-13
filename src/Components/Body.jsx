@@ -119,6 +119,4 @@ const Body = () => {
 
 export default Body;
 
-  // if (ListOfRestaurant?.length === 0) {
-  //   return <ShimmerUI />
-  // } else {
+  
