@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  
+const [btnNameReact, setbtnNameReact] = useState("login")
 
   return (
     <>
@@ -18,12 +20,18 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-6 text-lg md:text-xl font-medium text-black">
+        <div className="hidden md:flex items-center gap-6 text-lg md:text-xl font-medium text-black">
           <p className="cursor-pointer hover:text-gray-500">Home</p>
           <p className="cursor-pointer hover:text-gray-500">About us</p>
           <p className="cursor-pointer hover:text-gray-500">Contact us</p>
           <p className="cursor-pointer hover:text-gray-500">Cart</p>
-          <button className="w-18  bg-amber-500 rounded-xl  ">Login</button>
+<button
+onClick={()=>{
+  btnNameReact === "login" ? setbtnNameReact ("logout") : setbtnNameReact ("login")
+}}
+className="px-5 py-2 bg-amber-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+{btnNameReact}
+</button>
         </div>
 
         {/* Hamburger (RIGHT SIDE) */}
@@ -62,6 +70,13 @@ const Header = () => {
           <p className="cursor-pointer hover:text-black">About us</p>
           <p className="cursor-pointer hover:text-black">Contact us</p>
           <p className="cursor-pointer hover:text-black">Cart</p>
+          <button 
+onClick={()=>{
+  btnNameReact === "login" ? setbtnNameReact ("logout") : setbtnNameReact ("login")
+}}
+          className="px-5 py-2 bg-amber-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+ {btnNameReact}
+</button>
         </div>
       </div>
     </>

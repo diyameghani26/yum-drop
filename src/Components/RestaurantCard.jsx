@@ -16,7 +16,7 @@ const RestaurantCard = ({ resData }) => {
   } = info;
 
   return (
-    <div className="bg-white  rounded-2xl shadow-sm p-3 border border-transparent hover:border-gray-500 transition-all duration-200">
+    <div className="bg-white  rounded-2xl shadow-sm p-2 border border-transparent hover:border-gray-500 transition-all duration-200">
       
       {/* IMAGE */}
       <img
