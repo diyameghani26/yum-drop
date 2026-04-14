@@ -5,7 +5,7 @@ import Body from "./Components/Body";
 
 function App() {
   return (
-    <div className="bg-[#ffeada8f]">
+    <div className="bg-[#ffeada8f]  min-h-screen w-full overflow-x-hidden">
       <Header />
       <Body/>
       

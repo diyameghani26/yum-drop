@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import {resList} from "../utils/mockData"
 import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 
@@ -15,24 +15,10 @@ const Body = () => {
 
 
   const fetchData = async () => {
-    const data = await fetch(
-    "https://corsproxy.io/?" + 
-    encodeURIComponent("https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=22.6203536&lng=77.7580826&carousel=true&third_party_vendor=1")
-  );
 
-    const json = await data.json();
-
-    const restaurants =
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-
-    setListOfRestaurant(restaurants);
-    console.log(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    
-    setfilteredList(restaurants); 
-
-  };
+   setListOfRestaurant(resList);
+  setfilteredList(resList);
+   };
 
   const handelSearch = (e) =>{
     const value = e.target.value 
@@ -92,13 +78,13 @@ const Body = () => {
                 return info?.avgRating && Number(info.avgRating) > 4;
               });
 
-              setListOfRestaurant(topRated);
+              setfilteredList(topRated);
             }}
           >
             Top Rated Restaurants
           </button>
         </div>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 md:gap-6">
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-2 md:gap-6">
           {filteredList.map((restaurant, index) => (
             <RestaurantCard
               key={restaurant?.info?.id || index}
