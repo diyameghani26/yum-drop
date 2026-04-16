@@ -71,7 +71,7 @@ const Body = () => {
 
         <div className="mt-5 w-full justify-center">
           <button
-            className="w-full sm:w-auto px-4 py-2 md:px-5 md:py-3 text-sm md:text-base rounded-xl bg-amber-500 font-serif hover:bg-amber-600 transition-all"
+            className="w-full   sm:w-auto px-4 py-2 md:px-5 md:py-3 text-sm md:text-base rounded-xl bg-amber-500 font-serif hover:bg-amber-600 transition-all"
             onClick={() => {
               const topRated = resList.filter((res) => {
                 const info = res?.info || res?.card?.card?.info;
@@ -84,7 +84,7 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-2 md:gap-6">
+        <div className="    mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-2 md:gap-6">
           {filteredList.map((restaurant, index) => (
             <RestaurantCard
               key={restaurant?.info?.id || index}

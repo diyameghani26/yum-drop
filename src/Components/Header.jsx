@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -9,7 +10,7 @@ const [btnNameReact, setbtnNameReact] = useState("login")
   return (
     <>
       {/* Navbar */}
-      <div className="w-full  bg-[#fdefe48f] font-serif shadow-sm px-5 md:px-8 py-4 flex items-center justify-between" style={{ fontFamily: "cursive" }}>
+      <div className="w-full   font-serif shadow-sm px-5 md:px-8  py-2 md:py-4 flex items-center justify-between" style={{ fontFamily: "cursive" }}>
         
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -21,10 +22,10 @@ const [btnNameReact, setbtnNameReact] = useState("login")
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-lg md:text-xl font-medium text-black">
-          <p className="cursor-pointer hover:text-gray-500">Home</p>
-          <p className="cursor-pointer hover:text-gray-500">About us</p>
-          <p className="cursor-pointer hover:text-gray-500">Contact us</p>
-          <p className="cursor-pointer hover:text-gray-500">Cart</p>
+        <Link to = "/">  <p className="cursor-pointer hover:text-gray-500">Home</p></Link>
+        <Link to = "about">  <p className="cursor-pointer hover:text-gray-500">About</p></Link>
+        <Link to="contact">   <p className="cursor-pointer hover:text-gray-500">Contact us</p></Link>
+      <p className="cursor-pointer hover:text-gray-500">Cart</p>
 <button
 onClick={()=>{
   btnNameReact === "login" ? setbtnNameReact ("logout") : setbtnNameReact ("login")
@@ -66,10 +67,12 @@ className="px-5 py-2 bg-amber-500 text-white font-medium rounded-xl shadow-md ho
 
         {/* Menu */}
         <div className="flex flex-col gap-6 px-6 text-lg text-gray-600">
-          <p className="cursor-pointer hover:text-black">Home</p>
-          <p className="cursor-pointer hover:text-black">About us</p>
-          <p className="cursor-pointer hover:text-black">Contact us</p>
-          <p className="cursor-pointer hover:text-black">Cart</p>
+         
+         <Link to="/">   <p className="cursor-pointer hover:text-black">Home</p></Link>
+         <Link to="/about" >        
+          <p className="cursor-pointer hover:text-black">About us</p></Link>
+         <Link to= "/contact">          <p className="cursor-pointer hover:text-black">Contact us</p></Link>
+     <p className="cursor-pointer hover:text-black">Cart</p>
           <button 
 onClick={()=>{
   btnNameReact === "login" ? setbtnNameReact ("logout") : setbtnNameReact ("login")
@@ -84,3 +87,4 @@ onClick={()=>{
 };
 
 export default Header;
+// bg-[#ffeada8f]
