@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {resList} from "../utils/mockData"
 import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const Body = () => {
 
@@ -86,10 +87,12 @@ const Body = () => {
         </div>
         <div className="    mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-2 md:gap-6">
           {filteredList.map((restaurant, index) => (
-            <RestaurantCard
-              key={restaurant?.info?.id || index}
+          <Link 
+           key={restaurant?.info?.id || index}
+          to={"/restaurants/"+restaurant?.info?.id || index}>  <RestaurantCard
+             
               resData={restaurant}
-            />
+            /></Link> 
 
           ))}
 

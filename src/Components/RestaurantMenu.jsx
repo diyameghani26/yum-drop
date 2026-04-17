@@ -1,24 +1,33 @@
 import { useEffect , useState } from "react";
-
+import { useParams } from "react-router-dom";
+import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu = () =>{
 
-    const [resInfo, setresInfo] = useState(null)
+    const [resInfo, setresInfo] = useState(null);
+
+    const {resId} = useParams();
+   
 
    useEffect(() =>{
     fetchMenu();
    } , []) ;
 
-const fetchMenu = async () => {
- const data = await fetch (
-      "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.6203536&lng=77.7580826&restaurantId=174095&submitAction=ENTER"
- );
- const json = await data.json();
 
- console.log(json)
-  
- setresInfo(json.data)
-}
+const fetchMenu = async () => {
+  if (!resId) return;
+
+  const data = await fetch(
+    MENU_API + resId + "&submitAction=ENTER"
+  );
+
+  const json = await data.json();
+
+  console.log("FULL JSON 👉", json);
+
+  setresInfo(json?.data?.data || json?.data);
+};
+console.log("URL 👉", MENU_API + resId + "&submitAction=ENTER");
 
 
 const info = resInfo?.cards?.[2]?.card?.card?.info;
@@ -33,7 +42,7 @@ const itemCards = resInfo?.cards
 
 // console.log(itemCards);
 
-
+console.log("cards 👉", resInfo?.cards);
 
 const categories = itemCards?.filter(
   c =>
@@ -46,11 +55,9 @@ const categories = itemCards?.filter(
 
 const items = categories?.[0]?.card?.card?.itemCards;
 
-// console.log("items 👉", items);
-console.log(items?.[0]);
 
 return (
-  <div className="w-full px-4 md:px-16 py-6  ">
+  <div  className="max-w-3xl mx-auto px-4 py-6">
 
     {/* Restaurant Card */}
     <div className="bg-white rounded-4xl shadow-gray-300 shadow-md border border-gray-300 p-5 md:p-6  ">
@@ -129,7 +136,7 @@ avgRating  }</span>
           return (
             <div
               key={info?.id}
-              className="flex justify-between md:gap-4 py-6 border-b hover:bg-gray-50 transition"
+              className="flex justify-between md:gap-4 py-6 border-b border-gray-300 hover:bg-gray-50 transition"
             >
 
               {/* LEFT SIDE */}
