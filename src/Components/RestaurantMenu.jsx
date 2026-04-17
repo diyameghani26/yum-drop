@@ -56,8 +56,7 @@ const categories = itemCards?.filter(
 
 
 const items = categories?.[0]?.card?.card?.itemCards;
-
-if (!resInfo) {
+if (!resInfo || !resInfo?.cards) {
   return <ShimmerUI />;
 }
 return (
