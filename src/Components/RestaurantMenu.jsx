@@ -27,6 +27,10 @@ const fetchMenu = async () => {
   console.log("FULL JSON 👉", json);
 
   setresInfo(json?.data?.data || json?.data);
+
+   setTimeout(() => {
+    setresInfo(json?.data?.data || json?.data);
+  }, 1000)
 };
 console.log("URL 👉", MENU_API + resId + "&submitAction=ENTER");
 
