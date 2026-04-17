@@ -20,8 +20,7 @@ const RestaurantMenu = () => {
       setError(false);
 
       const data = await fetch(
-       "https://corsproxy.io/?" +
-  encodeURIComponent(MENU_API + resId + "&submitAction=ENTER")
+        MENU_API + resId + "&submitAction=ENTER"
       );
 
       const json = await data.json();
@@ -196,5 +195,5 @@ const RestaurantMenu = () => {
   );
 };
 
-export default RestaurantMenu;
+export default RestaurantMenu;     
 
