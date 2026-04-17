@@ -20,7 +20,8 @@ const RestaurantMenu = () => {
       setError(false);
 
       const data = await fetch(
-        MENU_API + resId + "&submitAction=ENTER"
+       "https://corsproxy.io/?" +
+  encodeURIComponent(MENU_API + resId + "&submitAction=ENTER")
       );
 
       const json = await data.json();
