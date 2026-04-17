@@ -17,6 +17,7 @@ const RestaurantMenu = () => {
   const fetchMenu = async () => {
     try {
       setLoading(true);
+      setError(false);
 
       const data = await fetch(
         MENU_API + resId + "&submitAction=ENTER"
@@ -24,11 +25,16 @@ const RestaurantMenu = () => {
 
       const json = await data.json();
 
-      console.log("FULL JSON 👉", json);
+      const realData = json?.data?.data || json?.data;
 
-      // delay for shimmer feel
+      // ❗ if API gives empty → treat as error
+      if (!realData || !realData?.cards) {
+        throw new Error("No valid data");
+      }
+
+      // shimmer delay
       setTimeout(() => {
-        setresInfo(json?.data?.data || json?.data);
+        setresInfo(realData);
         setLoading(false);
       }, 800);
 
@@ -39,25 +45,30 @@ const RestaurantMenu = () => {
     }
   };
 
-  console.log("URL 👉", MENU_API + resId + "&submitAction=ENTER");
-
-  // ✅ LOADING STATE
+  // ✅ LOADING
   if (loading) {
     return <ShimmerUI />;
   }
 
-  // ✅ ERROR STATE
+  // ✅ ERROR (mobile fix)
   if (error) {
     return (
-      <h1 className="text-center mt-10 text-red-500">
-        Something went wrong 😢
-      </h1>
-    );
-  }
+      <div className="text-center mt-10 px-4">
+        <h1 className="text-lg font-semibold">
+          ⚠️ Menu not loading
+        </h1>
+        <p className="text-gray-500 mt-2">
+          Network ya API issue ho sakta hai
+        </p>
 
-  // ✅ SAFE DATA CHECK
-  if (!resInfo?.cards) {
-    return <ShimmerUI />;
+        <button
+          onClick={fetchMenu}
+          className="mt-4 px-4 py-2 bg-orange-500 text-white rounded-lg"
+        >
+          Retry
+        </button>
+      </div>
+    );
   }
 
   const info = resInfo?.cards?.[2]?.card?.card?.info;
@@ -87,64 +98,49 @@ const RestaurantMenu = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 py-6">
 
-      {/* Restaurant Card */}
-      <div className="bg-white rounded-3xl shadow-md border border-gray-300 p-5 md:p-6">
+      {/* Restaurant Info */}
+      <div className="bg-white rounded-3xl shadow-md border p-5">
 
         <h1 className="text-xl md:text-2xl font-bold mb-2">
           {name}
         </h1>
 
-        <div className="flex flex-wrap items-center gap-2 text-sm md:text-base text-gray-700">
-          <span className="font-semibold text-green-600">
+        <div className="flex gap-2 text-sm text-gray-700">
+          <span className="text-green-600 font-semibold">
             ⭐ {avgRating}
           </span>
           <span>•</span>
           <span>{costForTwoMessage}</span>
         </div>
 
-        <p className="text-orange-600 mt-2 text-sm md:text-base font-medium">
+        <p className="text-orange-600 mt-2 text-sm">
           {cuisines?.join(", ")}
         </p>
 
-        <div className="mt-3 text-gray-600 text-sm">
+        <div className="mt-3 text-sm text-gray-600">
           <p>Outlet: {areaName}</p>
           <p>{sla?.slaString}</p>
         </div>
 
-        <div className="mt-4 border-t pt-3 text-sm text-orange-500 font-medium">
-          <p>
-            {freeDelivery || "Free delivery on orders above ₹199"}
-          </p>
+        <div className="mt-3 border-t pt-2 text-orange-500 text-sm">
+          {freeDelivery || "Free delivery on orders above ₹199"}
         </div>
       </div>
 
-      {/* MENU Heading */}
-      <div className="flex items-center justify-center mt-8 mb-4">
-        <div className="border-t w-10"></div>
-        <span className="mx-3 text-gray-500 tracking-widest text-sm">
-          MENU
-        </span>
-        <div className="border-t w-10"></div>
-      </div>
-
-      {/* Search */}
-      <div className="w-full">
-        <input
-          type="text"
-          placeholder="Search for dishes"
-          className="w-full px-4 py-3 rounded-xl shadow-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-400"
-        />
+      {/* MENU */}
+      <div className="text-center mt-8 mb-4 text-gray-500">
+        ――― MENU ―――
       </div>
 
       {/* Categories */}
-      <div className="mt-4">
+      <div>
         {categories?.map((category) => {
           const items = category?.card?.card?.itemCards;
 
           return (
-            <div key={category?.card?.card?.title} className="mb-4">
+            <div key={category?.card?.card?.title} className="mb-6">
 
-              <h2 className="text-lg md:text-xl font-bold mb-2">
+              <h2 className="font-bold text-lg mb-2">
                 {category?.card?.card?.title}
               </h2>
 
@@ -154,27 +150,17 @@ const RestaurantMenu = () => {
                 return (
                   <div
                     key={info?.id}
-                    className="flex justify-between py-6 border-b border-gray-200"
+                    className="flex justify-between py-5 border-b"
                   >
-
                     {/* LEFT */}
                     <div className="w-3/4">
+                      <h3 className="font-medium">{info?.name}</h3>
 
-                      <h3 className="font-semibold text-base md:text-lg">
-                        {info?.name}
-                      </h3>
-
-                      <p className="text-gray-800 mt-1">
+                      <p className="text-sm text-gray-700 mt-1">
                         ₹{info?.price / 100 || info?.defaultPrice / 100}
                       </p>
 
-                      {info?.ratings?.aggregatedRating?.rating && (
-                        <p className="text-green-600 text-sm mt-1">
-                          ⭐ {info?.ratings?.aggregatedRating?.rating}
-                        </p>
-                      )}
-
-                      <p className="text-gray-500 text-sm mt-2">
+                      <p className="text-xs text-gray-500 mt-1">
                         {info?.description}
                       </p>
                     </div>
@@ -189,14 +175,13 @@ const RestaurantMenu = () => {
                             info?.imageId
                           }
                           alt={info?.name}
-                          className="w-24 h-24 object-cover rounded-xl"
+                          className="w-20 h-20 rounded-lg object-cover"
                         />
                       )}
 
-                      <button className="bg-white border px-3 py-1 rounded-lg shadow-md text-green-600 font-semibold -mt-4">
+                      <button className="mt-2 px-3 py-1 border rounded text-green-600">
                         ADD
                       </button>
-
                     </div>
 
                   </div>
