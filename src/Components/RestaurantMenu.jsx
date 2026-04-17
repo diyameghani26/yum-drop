@@ -1,6 +1,7 @@
 import { useEffect , useState } from "react";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
+import ShimmerUI from "./ShimmerUI";
 
 const RestaurantMenu = () =>{
 
@@ -40,9 +41,7 @@ const itemCards = resInfo?.cards
   ?.find(c => c?.groupedCard)
   ?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
-// console.log(itemCards);
 
-console.log("cards 👉", resInfo?.cards);
 
 const categories = itemCards?.filter(
   c =>
@@ -51,11 +50,12 @@ const categories = itemCards?.filter(
 );
 
 
-// console.log("categories 👉", categories);
 
 const items = categories?.[0]?.card?.card?.itemCards;
 
-
+if (!resInfo) {
+  return <ShimmerUI />;
+}
 return (
   <div  className="max-w-3xl mx-auto px-4 py-6">
 
