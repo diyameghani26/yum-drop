@@ -20,7 +20,7 @@ const RestaurantMenu = () => {
       setError(false);
 
       const data = await fetch(
-        MENU_API + resId + "&submitAction=ENTER"
+        MENU_API + resId 
       );
 
       const json = await data.json();
