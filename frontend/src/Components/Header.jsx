@@ -68,9 +68,9 @@ className="px-5 py-2 bg-amber-500 text-white font-medium rounded-xl shadow-md ho
         {/* Menu */}
         <div className="flex flex-col gap-6 px-6 text-lg text-gray-600">
          
-         <Link to="/">   <p className="cursor-pointer hover:text-black">Home</p></Link>
-        <Link to= "/contact">          <p className="cursor-pointer hover:text-black">Contact us</p></Link>
-         <Link to = "help">  <p className="cursor-pointer hover:text-gray-500">Help</p></Link>
+         <Link to="/"  onClick={() => setIsMenuOpen(false)} >    <p className="cursor-pointer hover:text-black">Home</p></Link>
+        <Link to= "/contact"   onClick={() => setIsMenuOpen(false)} >   <p className="cursor-pointer hover:text-black">Contact us</p></Link>
+         <Link to = "help" onClick={() => setIsMenuOpen(false)}>  <p className="cursor-pointer hover:text-gray-500">Help</p></Link>
      <p className="cursor-pointer hover:text-black">Cart</p>
           <button 
 onClick={()=>{
@@ -86,4 +86,3 @@ onClick={()=>{
 };
 
 export default Header;
-// bg-[#ffeada8f]

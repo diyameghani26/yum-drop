@@ -67,7 +67,7 @@ const Help = () => {
       </div>
 
       {/* Body */}
-      <div className="max-w-4xl mx-auto mt-9 md:mt-9 px-4 flex flex-col md:flex-row gap-4">
+      <div className="max-w-6xl mx-auto mt-9 md:mt-9 px-4 flex flex-col md:flex-row gap-4">
 
         {/* Left — Categories — horizontal scroll on mobile */}
         <div className="md:w-1/2 flex md:flex-col flex-row overflow-x-auto md:overflow-visible bg-gray-50 rounded-xl border border-gray-200">
@@ -75,7 +75,7 @@ const Help = () => {
             <div
               key={cat.id}
               onClick={() => setActive(cat)}
-              className={`px-5 py-4 cursor-pointer text-sm font-medium border-b border-gray-200 transition whitespace-nowrap md:whitespace-normal
+              className={`px-5 py-4 md:py-5 cursor-pointer text-sm font-medium border-b border-gray-200 transition whitespace-nowrap md:whitespace-normal
                 ${active.id === cat.id
                   ? "bg-white text-orange-500 md:border-l-4 md:border-l-orange-500 border-b-2 border-b-orange-500"
                   : "text-gray-700 hover:bg-white"
@@ -88,10 +88,10 @@ const Help = () => {
 
         {/* Right — Content */}
         <div className="md:w-2/3 mt-5 bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="text-xl font-bold mb-3 text-gray-800">
+          <h2 className="text-xl font-bold mb-3 md:mb-4 text-gray-800">
             {active.title}
           </h2>
-          <p className="text-gray-500 text-[16px] leading-relaxed whitespace-pre-line">
+          <p className="text-gray-600 text-[16px] leading-relaxed whitespace-pre-line">
             {active.content}
           </p>
 
@@ -103,19 +103,19 @@ const Help = () => {
             <input
               type="text"
               placeholder="Your name"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 md:py-4 text-sm mb-3 md:mb-5 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
             <input
               type="email"
               placeholder="Your email"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 md:py-4 text-sm mb-3  md:mb-5 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
             <textarea
               placeholder="Describe your issue..."
               rows={3}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2  md:py-4 text-sm mb-3 md:mb-5 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
-            <button className="bg-orange-500 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition">
+            <button className="bg-orange-500 text-white px-5 py-2 md:py-3 md:px-7 rounded-lg text-sm font-medium hover:bg-orange-600 transition  md:mt-4 md:text-lg">
               Submit
             </button>
           </div>
