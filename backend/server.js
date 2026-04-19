@@ -5,7 +5,6 @@ const axios = require("axios");
 const app = express();
 app.use(cors());
 
-// Menu API
 app.get("/api/menu", async (req, res) => {
   const { resId } = req.query;
   try {

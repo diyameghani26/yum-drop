@@ -96,24 +96,24 @@ const Help = () => {
           </p>
 
           {/* Contact Form */}
-          <div className="mt-6 border-t pt-4">
-            <p className="text-lg font-medium text-gray-700 mb-3">
+          <div className="mt-6 border-t pt-7">
+            <p className="text-lg font-medium text-gray-700 mb-4">
               Still need help? Contact us:
             </p>
             <input
               type="text"
               placeholder="Your name"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
             <input
               type="email"
               placeholder="Your email"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
             <textarea
               placeholder="Describe your issue..."
               rows={3}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
             />
             <button className="bg-orange-500 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition">
               Submit
