@@ -59,7 +59,7 @@ const Help = () => {
   return (
     <div>
       {/* Header */}
-      <div className="bg-[#fcaa67] text-center px-6 py-8 text-white">
+      <div className="bg-[#f79e55] text-center px-6 py-8 text-white">
         <h1 className="text-3xl  md:text-5xl font-bold">Help & Support</h1>
         <p className="text-sm mt-1 md:text-2xl opacity-90">
           Let's take a step ahead and help you better.
