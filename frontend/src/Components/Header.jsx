@@ -23,8 +23,8 @@ const [btnNameReact, setbtnNameReact] = useState("login")
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-lg md:text-xl font-medium text-black">
         <Link to = "/">  <p className="cursor-pointer hover:text-gray-500">Home</p></Link>
-        <Link to = "about">  <p className="cursor-pointer hover:text-gray-500">About</p></Link>
-        <Link to="contact">   <p className="cursor-pointer hover:text-gray-500">Contact us</p></Link>
+       <Link to="contact">   <p className="cursor-pointer hover:text-gray-500">Contact us</p></Link>
+         <Link to = "help">  <p className="cursor-pointer hover:text-gray-500">Help</p></Link>
       <p className="cursor-pointer hover:text-gray-500">Cart</p>
 <button
 onClick={()=>{
@@ -69,9 +69,8 @@ className="px-5 py-2 bg-amber-500 text-white font-medium rounded-xl shadow-md ho
         <div className="flex flex-col gap-6 px-6 text-lg text-gray-600">
          
          <Link to="/">   <p className="cursor-pointer hover:text-black">Home</p></Link>
-         <Link to="/about" >        
-          <p className="cursor-pointer hover:text-black">About us</p></Link>
-         <Link to= "/contact">          <p className="cursor-pointer hover:text-black">Contact us</p></Link>
+        <Link to= "/contact">          <p className="cursor-pointer hover:text-black">Contact us</p></Link>
+         <Link to = "help">  <p className="cursor-pointer hover:text-gray-500">Help</p></Link>
      <p className="cursor-pointer hover:text-black">Cart</p>
           <button 
 onClick={()=>{
