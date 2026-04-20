@@ -3,6 +3,7 @@ import {resList} from "../utils/mockData"
 import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
 
@@ -36,7 +37,24 @@ const Body = () => {
    console.log(filteredList)
   };
 
- 
+
+
+  const onlineStatus = useOnlineStatus();
+
+  if(onlineStatus === false) 
+    return(
+
+  
+   <h1 className="text-gray-600  mt-50 text-center  text-sm md:text-2xl font-medium">
+    🛜 Oops! You're offline right now.  
+  <br className="hidden md:block" />
+  Please check your internet connection and try again.
+</h1>
+
+
+
+
+  )
     return (
       <div className=" min-w-full pt-4 flex flex-col justify-center px-6 md:px-16 md:items-center">
 

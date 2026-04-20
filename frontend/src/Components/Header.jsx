@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   
 const [btnNameReact, setbtnNameReact] = useState("login")
+  const onlineStatus = useOnlineStatus();
 
   return (
     <>
       {/* Navbar */}
       <div className="w-full   font-serif shadow-sm px-5 md:px-8  py-2 md:py-4 flex items-center justify-between" style={{ fontFamily: "cursive" }}>
         
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img src="/—Pngtree—food logo_8366720.png" alt="" className="w-13 md:w-16" />
-          <h1 className="font-bold text-2xl md:text-4xl text-gray-700 ">
-            Yum<span className="text-amber-500">Drop</span>
-          </h1>
-        </div>
+       {/* Logo */}
+<div className="flex items-center gap-2">
+  <img src="/—Pngtree—food logo_8366720.png" alt="" className="w-13 md:w-16" />
+  <h1 className="font-bold text-2xl md:text-4xl text-gray-700">
+    Yum<span className="text-amber-500">Drop</span>
+  </h1>
+  {/* Online Status Dot */}
+  <span
+    className={`w-2 h-2 rounded-full ${
+      onlineStatus ? "bg-green-500" : "bg-red-500"
+    }`}
+  ></span>
+</div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-lg md:text-xl font-medium text-black">
