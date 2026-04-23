@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const RestaurantCard = ({ resData }) => {
@@ -14,6 +13,7 @@ const RestaurantCard = ({ resData }) => {
     costForTwoMessage,
     sla,
   } = info;
+
 
   return (
     <div className="bg-white  rounded-2xl shadow-sm p-2 border border-transparent hover:border-gray-500 transition-all  hover:scale-95 duration-200">
@@ -52,6 +52,26 @@ const RestaurantCard = ({ resData }) => {
       </p>
     </div>
   );
+};
+
+
+// higher order component 
+
+// input -> RestaurantCard  output-> RestaurantCardPromoted
+
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div className="relative">
+        <span className="absolute top-2 left-1 z-10 bg-gray-700 text-white text-[10px] md:text-[12px]  px-3 py-1  pointer-events-none">
+           Promoted
+        </span>
+        
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;

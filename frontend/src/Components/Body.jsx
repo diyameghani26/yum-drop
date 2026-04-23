@@ -1,21 +1,24 @@
 import React, { useEffect } from "react";
 import {resList} from "../utils/mockData"
 import { useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard , { withPromotedLabel}from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
+const RestaurantCardPromoted = withPromotedLabel(RestaurantCard)
 const Body = () => {
 
   const [ListOfRestaurant, setListOfRestaurant] = useState([])
   const [searchText, setsearchText] = useState("")
   const [filteredList, setfilteredList] = useState([]);
 
+
+
   useEffect(() => {
     fetchData();
   }, [])
 
-
+console.log(ListOfRestaurant)
   const fetchData = async () => {
 
    setListOfRestaurant(resList);
@@ -50,8 +53,6 @@ const Body = () => {
   <br className="hidden md:block" />
   Please check your internet connection and try again.
 </h1>
-
-
 
 
   )
@@ -103,14 +104,19 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-        <div className="    mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-2 md:gap-6">
+        <div className=" mt-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-2 md:gap-6">
           {filteredList.map((restaurant, index) => (
           <Link 
            key={restaurant?.info?.id || index}
-          to={"/restaurants/"+restaurant?.info?.id || index}>  <RestaurantCard
-             
-              resData={restaurant}
-            /></Link> 
+        to={`/restaurants/${restaurant?.info?.id ?? index}`}> 
+
+
+     {restaurant?.info?.promoted 
+  ? <RestaurantCardPromoted resData={restaurant}/> 
+  : <RestaurantCard resData={restaurant}/>
+}
+
+          </Link> 
 
           ))}
 
@@ -120,7 +126,7 @@ const Body = () => {
       </div>
     );
   
-
+  
 
 };
 
