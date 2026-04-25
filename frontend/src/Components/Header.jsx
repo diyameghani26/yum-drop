@@ -106,58 +106,49 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
 
-  return (
-    <>
-      {/* Navbar */}
-      <div className="w-full font-serif shadow-sm px-5 md:px-8 py-3 md:py-4 flex items-center justify-between bg-white sticky top-0 z-40">
+return (
+  <>
+    <div className="w-full font-serif shadow-sm px-5 md:px-8 py-3 md:py-4 flex items-center justify-between bg-white sticky top-0 z-40">
 
-        {/* LEFT - LOGO */}
-        <div className="flex items-center gap-2">
-          <img
-            src="/—Pngtree—food logo_8366720.png"
-            alt="logo"
-            className="w-12 md:w-14"
-          />
+      {/* LEFT - LOGO */}
+      <div className="flex items-center gap-2">
+        <img
+          src="/—Pngtree—food logo_8366720.png"
+          alt="logo"
+          className="w-12 md:w-14"
+        />
 
-          <h1
-            className="font-bold text-xl md:text-3xl text-gray-700"
-            style={{ fontFamily: "cursive" }}
-          >
-            Yum<span className="text-amber-500 italic">Drop</span>
-          </h1>
-        </div>
+        <h1 className="font-bold text-xl md:text-3xl text-gray-700" style={{ fontFamily: "cursive" }}>
+          Yum<span className="text-amber-500 italic">Drop</span>
+        </h1>
+      </div>
 
-        {/* DESKTOP NAV */}
+      {/* RIGHT SIDE (Nav + Cart together) */}
+      <div className="flex items-center gap-6 ml-auto">
+
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-lg font-medium text-gray-700">
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/help">Help</Link>
-          <p className="cursor-pointer">Cart</p>
-
-          <button
-            onClick={() =>
-              setbtnNameReact(btnNameReact === "login" ? "logout" : "login")
-            }
-            className="px-5 py-2 bg-amber-500 text-white rounded-xl hover:bg-amber-600 transition"
-          >
-            {btnNameReact}
-          </button>
+          <Link to="/" className="hover:text-amber-500 transition">Home</Link>
+          <Link to="/contact" className="hover:text-amber-500 transition">Contact</Link>
+          <Link to="/help" className="hover:text-amber-500 transition">Help</Link>
         </div>
 
-        {/* MOBILE - ONLY CART */}
-        <div className="flex md:hidden items-center text-2xl text-gray-700">
+        {/* Cart */}
+        <div className="flex items-center text-2xl text-gray-700">
           <Link to="/cart" className="relative hover:text-amber-500 transition">
             <i className="ri-shopping-cart-2-line"></i>
 
-            {/* Badge */}
             <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] px-1.5 rounded-full">
               1
             </span>
           </Link>
         </div>
+
       </div>
-    </>
-  );
+
+    </div>
+  </>
+);
 };
 
 export default Header;
