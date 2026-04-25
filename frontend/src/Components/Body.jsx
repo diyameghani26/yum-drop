@@ -18,7 +18,7 @@ const Body = () => {
     fetchData();
   }, [])
 
-console.log(ListOfRestaurant)
+
   const fetchData = async () => {
 
    setListOfRestaurant(resList);

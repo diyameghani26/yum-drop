@@ -5,6 +5,8 @@ import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import BottomNav from "./Components/BottomNav ";
+import Profile from "./Components/Profile";
 
 // Layout Component
 const AppLayout = () => {
@@ -12,7 +14,7 @@ const AppLayout = () => {
     <div className=" min-h-screen w-full overflow-x-hidden">
       <Header />
       <Outlet/>
-      
+      <BottomNav/>
     </div>
   );
 };
@@ -39,6 +41,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
+      },
+         {
+        path: "/profile",
+        element: <Profile />,
       },
     ],
   },

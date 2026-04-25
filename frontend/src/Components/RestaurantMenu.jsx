@@ -95,6 +95,7 @@ const RestaurantMenu = () => {
       !c?.card?.card?.title?.includes("Items at")
   );
 
+  console.log(categories)
   return (
      <div  className="max-w-3xl mx-auto px-4 py-6">
 
@@ -128,8 +129,8 @@ avgRating  }</span>
 
       {/* Divider */}
       <div className="mt-4 border-t pt-3 text-sm text-orange-500 font-medium">
-       <p className="text-orange-500 text-sm mt-2">
-  {freeDelivery || "Free delivery on orders above ₹199"}
+       <p className="text-orange-500 text-[13px] mt-2">
+  {freeDelivery || "ONE Free delivery on orders above ₹199"}
 </p>
       </div>
     </div>
