@@ -131,6 +131,8 @@ return (
           <Link to="/" className="hover:text-amber-500 transition">Home</Link>
           <Link to="/contact" className="hover:text-amber-500 transition">Contact</Link>
           <Link to="/help" className="hover:text-amber-500 transition">Help</Link>
+
+           
         </div>
 
         {/* Cart */}
@@ -142,6 +144,12 @@ return (
               1
             </span>
           </Link>
+
+            <Link to="/profile" className="hover:text-amber-500 transition ml-6 hidden md:block ">
+  <div className="w-8 h-8 flex items-center justify-center rounded-full  border-2 hover:bg-amber-100 transition">
+    <i className="ri-user-3-line text-xl"></i>
+  </div>
+</Link>
         </div>
 
       </div>
