@@ -54,7 +54,7 @@ const Profile = () => {
           <div className="flex-1 h-px bg-gray-200"></div>
         </div>
 
-        {/* Social Buttons */}
+        {/* Social Buttons
         <div className="flex flex-col sm:flex-row gap-3">
           <button className="flex-1 py-2 border rounded-xl text-sm sm:text-base hover:bg-gray-50">
             Google
@@ -62,7 +62,7 @@ const Profile = () => {
           <button className="flex-1 py-2 border rounded-xl text-sm sm:text-base hover:bg-gray-50">
             Apple
           </button>
-        </div>
+        </div> */}
 
         {/* Signup */}
         <p className="text-center text-sm sm:text-base text-gray-500 mt-6">
