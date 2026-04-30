@@ -1,13 +1,22 @@
 import React from "react";
 import { useContext, useState } from "react";
 import { AuthContext } from "../utils/AuthContext";
-
+import { useNavigate } from "react-router-dom";
 const Profile = () => {
 
   const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
-
+const navigate = useNavigate();
 const { login } = useContext(AuthContext);
+
+const handleLogin = () => {
+  console.log(email, password);
+
+  login(email, password);
+  navigate("/profilepage");
+};
+
+
   return (
     <div className="min-h-screen  flex items-center justify-center bg-gray-100 px-6 sm:px-5 lg:px-8 py-10 pb-40 ">
       
@@ -52,7 +61,7 @@ const { login } = useContext(AuthContext);
 
           {/* Login Button */}
           <button
-           onClick={() => login(email, password)}
+         onClick={handleLogin}
           className="w-full py-3 bg-amber-500 text-white rounded-xl font-medium hover:bg-amber-600 transition text-sm sm:text-base">
             Login
           </button>

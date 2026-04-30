@@ -8,6 +8,7 @@ import RestaurantMenu from "./Components/RestaurantMenu";
 import BottomNav from "./Components/BottomNav ";
 import Profile from "./Components/Profile";
 import AuthProvider from "./utils/AuthContext";
+import ProfilePage from "./Components/ProfilePage";
 
 // Layout Component
 const AppLayout = () => {
@@ -47,6 +48,10 @@ const appRouter = createBrowserRouter([
         path: "/profile",
         element: <Profile />,
       },
+      {
+  path: "/profilepage",
+  element: <ProfilePage />,
+}
     ],
   },
 ]);
