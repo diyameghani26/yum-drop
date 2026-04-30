@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import BottomNav from "./Components/BottomNav ";
 import Profile from "./Components/Profile";
+import AuthProvider from "./utils/AuthContext";
 
 // Layout Component
 const AppLayout = () => {
@@ -51,7 +52,11 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={appRouter} />;
+  return (
+    <AuthProvider>
+  <RouterProvider router={appRouter} />
+    </AuthProvider>
+)
 }
 
 export default App;

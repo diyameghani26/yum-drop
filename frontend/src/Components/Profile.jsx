@@ -1,6 +1,13 @@
 import React from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../utils/AuthContext";
 
 const Profile = () => {
+
+  const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+
+const { login } = useContext(AuthContext);
   return (
     <div className="min-h-screen  flex items-center justify-center bg-gray-100 px-6 sm:px-5 lg:px-8 py-10 pb-40 ">
       
@@ -26,11 +33,15 @@ const Profile = () => {
             type="email"
             placeholder="Email Address"
             className="w-full px-4 py-3 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-amber-400 text-sm sm:text-base"
+             value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <input
             type="password"
             placeholder="Password"
+             value={password}
+  onChange={(e) => setPassword(e.target.value)}
             className="w-full px-4 py-3 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-amber-400 text-sm sm:text-base"
           />
 
@@ -40,7 +51,9 @@ const Profile = () => {
           </div>
 
           {/* Login Button */}
-          <button className="w-full py-3 bg-amber-500 text-white rounded-xl font-medium hover:bg-amber-600 transition text-sm sm:text-base">
+          <button
+           onClick={() => login(email, password)}
+          className="w-full py-3 bg-amber-500 text-white rounded-xl font-medium hover:bg-amber-600 transition text-sm sm:text-base">
             Login
           </button>
         </div>
@@ -54,7 +67,7 @@ const Profile = () => {
           <div className="flex-1 h-px bg-gray-200"></div>
         </div>
 
-        {/* Social Buttons
+        Social Buttons
         <div className="flex flex-col sm:flex-row gap-3">
           <button className="flex-1 py-2 border rounded-xl text-sm sm:text-base hover:bg-gray-50">
             Google
@@ -62,7 +75,7 @@ const Profile = () => {
           <button className="flex-1 py-2 border rounded-xl text-sm sm:text-base hover:bg-gray-50">
             Apple
           </button>
-        </div> */}
+        </div>
 
         {/* Signup */}
         <p className="text-center text-sm sm:text-base text-gray-500 mt-6">
