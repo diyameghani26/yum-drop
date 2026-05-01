@@ -12,7 +12,6 @@ const ProfilePage = () => {
 
   const menu = [
     "Orders",
-    "Swiggy One",
     "Favourites",
     "Payments",
     "Addresses",
