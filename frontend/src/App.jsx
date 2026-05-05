@@ -9,6 +9,8 @@ import BottomNav from "./Components/BottomNav ";
 import Profile from "./Components/Profile";
 import AuthProvider from "./utils/AuthContext";
 import ProfilePage from "./Components/ProfilePage";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 // Layout Component
 const AppLayout = () => {
@@ -58,9 +60,11 @@ const appRouter = createBrowserRouter([
 
 function App() {
   return (
+    <Provider store={appStore}>
     <AuthProvider>
   <RouterProvider router={appRouter} />
     </AuthProvider>
+    </Provider>
 )
 }
 
