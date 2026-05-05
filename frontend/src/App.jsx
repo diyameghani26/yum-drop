@@ -1,7 +1,7 @@
 import Header from "./Components/Header";
 import Body from "./Components/Body";
 import Help from "./Components/Help";
-import Contact from "./Components/Contact";
+import Contact from "./Components/Fav";
 import Error from "./Components/Error";
 import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
 import RestaurantMenu from "./Components/RestaurantMenu";
@@ -11,6 +11,7 @@ import AuthProvider from "./utils/AuthContext";
 import ProfilePage from "./Components/ProfilePage";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Fav from "./Components/Fav";
 
 // Layout Component
 const AppLayout = () => {
@@ -49,6 +50,10 @@ const appRouter = createBrowserRouter([
          {
         path: "/profile",
         element: <Profile />,
+      },
+         {
+        path: "/fav",
+        element: <Fav />,
       },
       {
   path: "/profilepage",

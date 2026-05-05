@@ -6,8 +6,8 @@ const BottomNav = () => {
   const navItems = [
     { name: "Home", path: "/", icon: "ri-home-5-line" },
     { name: "Help", path: "/help", icon: "ri-question-line" },
-    { name: "Contact", path: "/contact", icon: "ri-customer-service-2-line" },
     { name: "Profile", path: "/profile", icon: "ri-user-3-line" },
+    { name: "Favourites", path: "/fav", icon: "ri-heart-3-line" },
   ];
 
   return (

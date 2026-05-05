@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
 import ShimmerUI from "./ShimmerUI";
+import appStore from "../utils/appStore";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantMenu = () => {
   const [resInfo, setresInfo] = useState(null);
@@ -9,6 +12,16 @@ const RestaurantMenu = () => {
   const [error, setError] = useState(false);
 
   const { resId } = useParams();
+
+const dispatch = useDispatch();
+
+const handelAddItem = () =>{
+  // dispatch an action
+  dispatch(addItem("pizza"));
+
+}
+
+
 
   useEffect(() => {
     fetchMenu();
@@ -230,8 +243,10 @@ avgRating  }</span>
                 )}
 
                 {/* ADD BUTTON */}
-                <button className="bg-white border px-3 md:px-4 md:py-1 rounded-lg shadow-md text-green-600 font-semibold -mt-4">
-                  ADD
+                <button 
+                onClick={handelAddItem}
+                className="bg-white border px-3 md:px-4 md:py-1 rounded-lg shadow-md text-green-600 font-semibold -mt-4">
+                  ADD +
                 </button>
 
                 {/* Customisable */}

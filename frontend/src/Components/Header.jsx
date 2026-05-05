@@ -43,20 +43,20 @@ return (
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-lg font-medium text-gray-700">
           <Link to="/" className="hover:text-amber-500 transition">Home</Link>
-          <Link to="/contact" className="hover:text-amber-500 transition">Contact</Link>
+         
           <Link to="/help" className="hover:text-amber-500 transition">Help</Link>
 
            
         </div>
 
        
-        <div className="flex items-center text-2xl text-gray-700">
-          <Link to="/cart" className="relative hover:text-amber-500 transition">
-            <i className="ri-shopping-cart-2-line"></i>
+        <div className="flex items-center text-xl text-gray-700">
+          <Link to="/cart" className="relative hover:text-amber-500 transition"> 
+           <span className="text-lg">Cart</span> <i className="ri-shopping-cart-2-line"></i>
 
-            <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] px-1.5 rounded-full">
-              {cartItems.length}
-            </span>
+<span className="absolute -top-2 -right-2 bg-amber-600 text-white text-[12px]  min-w-5 h-5 rounded-full flex items-center justify-center px-1.5 border-2 border-white leading-0">
+  {cartItems.length}
+</span>
           </Link>
 
             <Link to="/profile" className="hover:text-amber-500 transition ml-6 hidden md:block ">
