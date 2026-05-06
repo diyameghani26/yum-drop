@@ -12,6 +12,7 @@ import ProfilePage from "./Components/ProfilePage";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Fav from "./Components/Fav";
+import Cart from "./Components/Cart";
 
 // Layout Component
 const AppLayout = () => {
@@ -58,6 +59,10 @@ const appRouter = createBrowserRouter([
       {
   path: "/profilepage",
   element: <ProfilePage />,
+},
+{
+    path: "/cart",
+        element: <Cart />,
 }
     ],
   },

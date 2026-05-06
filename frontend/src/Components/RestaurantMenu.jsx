@@ -15,9 +15,9 @@ const RestaurantMenu = () => {
 
 const dispatch = useDispatch();
 
-const handelAddItem = () =>{
+const handelAddItem = (item) =>{
   // dispatch an action
-  dispatch(addItem("pizza"));
+  dispatch(addItem(item));
 
 }
 
@@ -108,7 +108,7 @@ const handelAddItem = () =>{
       !c?.card?.card?.title?.includes("Items at")
   );
 
-  console.log(categories)
+  console.log(itemCards)
   return (
      <div  className="max-w-3xl mx-auto px-4 py-6">
 
@@ -244,7 +244,7 @@ avgRating  }</span>
 
                 {/* ADD BUTTON */}
                 <button 
-                onClick={handelAddItem}
+                onClick={()=>handelAddItem(info)}
                 className="bg-white border px-3 md:px-4 md:py-1 rounded-lg shadow-md text-green-600 font-semibold -mt-4">
                   ADD +
                 </button>
