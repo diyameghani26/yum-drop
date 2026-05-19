@@ -1192,6 +1192,138 @@ export const resList = [
 ];
 
 
+export const categories = [
+  {
+    id: "750582",
+    name: "North Indian",
+    image:
+      "—Pngtree—north indian thali platter_21337851.png",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/83639?collection_id=83639",
+      text: "North Indian",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "750592",
+    name: "Biryani",
+    image:
+      "—Pngtree—mastering the art of biryani_16071203.png",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/83636?collection_id=83636",
+      text: "Biryani",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "750584",
+    name: "South Indian",
+    image:
+      "https://png.pngtree.com/png-vector/20250528/ourmid/pngtree-dosa-with-sambhar-and-chatni-south-indian-food-png-image_16398140.png",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/80438?collection_id=80438",
+      text: "South Indian",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "750580",
+    name: "Pizzas",
+    image:
+      "https://tse1.mm.bing.net/th/id/OIP.FD6p3ib-uO8g--fx4EfV2gHaHa?pid=Api&P=0&h=180",
+    action: {
+      link:
+        "https://www.swiggy.com/collections/83637?collection_id=83637",
+      text: "Pizzas",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "750111",
+    name: "Desserts",
+    image:
+      "https://static.vecteezy.com/system/resources/thumbnails/036/498/570/small_2x/ai-generated-panna-cotta-dessert-on-a-white-plate-on-transparent-background-png.png",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/83667?collection_id=83667",
+      text: "Desserts",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "749874",
+    name: "Cakes",
+    image:
+      "https://tse4.mm.bing.net/th/id/OIP.nIoJLCQ9lN8fTQOtYAKk2QHaFj?pid=Api&P=0&h=180",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/80395?collection_id=80395",
+      text: "Cakes",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "750588",
+    name: "Chinese",
+    image:
+    "  https://png.pngtree.com/png-clipart/20250124/original/pngtree-spicy-gobi-manchurian-recipe-png-image_19802010.png"
+      ,
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/83647?collection_id=83647",
+      text: "Chinese",
+      type: "DEEPLINK",
+    },
+  },
+
+
+  {
+    id: "750203",
+    name: "Paratha",
+    image:
+      "https://tse4.mm.bing.net/th/id/OIP.f_1wpRoOhPVVEL3M_VXkNAHaHa?pid=Api&P=0&h=180",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/80463?collection_id=80463",
+      text: "Paratha",
+      type: "DEEPLINK",
+    },
+  },
+
+  {
+    id: "749774",
+    name: "Noodles",
+    image:
+    "https://tse2.mm.bing.net/th/id/OIP.3prfSUsy2xTFEH2kya0pIgHaHa?pid=Api&P=0&h=180",
+
+    action: {
+      link:
+        "https://www.swiggy.com/collections/80459?collection_id=80459",
+      text: "Noodles",
+      type: "DEEPLINK",
+    },
+  },
+];
+
+
+
+
 
 
 

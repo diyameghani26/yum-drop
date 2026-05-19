@@ -56,10 +56,10 @@ return (
     </div>
 
     {/* Main Layout */}
-    <div className="flex flex-col md:flex-row max-w-7xl lg:max-w-350 mx-auto mt-6  bg-white ">
+   <div className="flex flex-col md:flex-row w-full max-w-[1700px] mx-auto mt-6 bg-white min-h-[75vh]">
       
       {/* Sidebar */}
-      <div className="hidden md:block w-72 lg:w-80 bg-gray-100 p-4 lg:p-6">
+<div className="hidden md:block w-80 lg:w-96 bg-gray-100 p-6 lg:p-8">
         {menu.map((item) => (
           <div
             key={item}
@@ -84,7 +84,7 @@ return (
       </div>
 
       {/* Content */}
-      <div className="flex-1 p-6 lg:p-10 flex items-center justify-center text-center">
+     <div className="flex-1 p-8 lg:p-14 flex items-center justify-center text-center">
         
         {active === "Orders" && (
           <div>

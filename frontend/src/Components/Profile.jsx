@@ -76,7 +76,7 @@ const handleLogin = () => {
           <div className="flex-1 h-px bg-gray-200"></div>
         </div>
 
-        Social Buttons
+        <h1 className="mb-3">Social Buttons </h1>
         <div className="flex flex-col sm:flex-row gap-3">
           <button className="flex-1 py-2 border rounded-xl text-sm sm:text-base hover:bg-gray-50">
             Google
