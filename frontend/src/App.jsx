@@ -14,6 +14,7 @@ import appStore from "./utils/appStore";
 import Fav from "./Components/Fav";
 import Cart from "./Components/Cart";
 
+
 // Layout Component
 const AppLayout = () => {
   return (
