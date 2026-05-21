@@ -10,12 +10,10 @@ const Favourites = () => {
   const { favourites, toggleFavourite } = useFavourite();
 
   return (
-
-    <div className="min-h-screen bg-[#f8f8f8] px-6 md:px-12 py-8">
+<div className="min-h-screen bg-[#f8f8f8] px-6 md:px-12 py-8 pb-28">
 
       {/* HEADING */}
-
-      <div className="max-w-375 ">
+      <div className="max-w-[1500] mx-auto md:mx-1 ">
 
         <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
 
