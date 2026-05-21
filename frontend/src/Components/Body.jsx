@@ -415,7 +415,7 @@ const Body = () => {
 
         {/* SOCIALS */}
 
-        <div className="flex gap-4 mt-6 text-xl text-gray-600">
+        <div className="flex gap-4 mt-3  justify-center md:mt-5 mr-8 text-xl text-gray-600">
 
           <i className="ri-instagram-line hover:text-orange-500 cursor-pointer transition"></i>
 

@@ -47,7 +47,8 @@ return (
           <Link to="/help" className="hover:text-amber-500 transition">Help
           </Link>
 
-
+           <Link to="/favourites" className="hover:text-amber-500 transition"> Favourites
+           </Link>
            
         </div>
 
